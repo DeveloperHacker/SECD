@@ -1,0 +1,109 @@
+DUM
+NIL
+
+// Quote
+LDF
+[
+    LD [ 1 1 ] RTN
+]
+
+// List
+LDF
+[
+    LD [ 1 1 ] RTN
+]
+
+// Add
+LDF
+[
+    LD 1 CDR CDR LD [ 1 2 ] CDR CONS LD [ 1 2 ] CAR AP
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    ADD RTN
+]
+
+// Sub
+LDF
+[
+    LD 1 CDR CDR LD [ 1 2 ] CDR CONS LD [ 1 2 ] CAR AP
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    SUB RTN
+]
+
+// Mul
+LDF
+[
+    LD 1 CDR CDR LD [ 1 2 ] CDR CONS LD [ 1 2 ] CAR AP
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    MUL RTN
+]
+
+// Div
+LDF
+[
+    LD 1 CDR CDR LD [ 1 2 ] CDR CONS LD [ 1 2 ] CAR AP
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    DIV RTN
+]
+
+// Rem
+LDF
+[
+    LD 1 CDR CDR LD [ 1 2 ] CDR CONS LD [ 1 2 ] CAR AP
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    REM RTN
+]
+
+// Eval
+LDF
+[
+    LD 1 CDR CDR LD [ 1 1 ] CDR CDR CONS LD [ 1 1 ] CDR CAR AP
+    RTN
+]
+
+// Car
+LDF
+[
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    CAR RTN
+]
+
+// Cdr
+LDF
+[
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    CDR RTN
+]
+
+// Cons
+LDF
+[
+    LD 1 CDR CDR LD [ 1 2 ] CDR CONS LD [ 1 2 ] CAR AP
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    CONS RTN
+]
+
+// if
+LDF
+[
+    LD 1 CDR CDR LD [ 1 1 ] CDR CONS LD [ 1 1 ] CAR AP
+    SEL
+    [
+        LD 1 CDR CDR LD [ 1 2 ] CDR CONS LD [ 1 2 ] CAR AP
+    ]
+    [
+        LD 1 CDR CDR LD [ 1 3 ] CDR CONS LD [ 1 3 ] CAR AP
+    ]
+    CONS RTN
+]
+
+NIL
+CONS CONS CONS CONS CONS CONS CONS CONS CONS CONS CONS CONS CONS
+
+LDF
+[
+    LDC [ [ 1 2 ] ] LD [ 1 13 ] AP
+    RTN
+]
+AP
+
+STOP
