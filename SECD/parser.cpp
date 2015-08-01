@@ -7,7 +7,7 @@ bool Parser::isNumber(const std::string &number)
     if (number.size() == 0) return false;
     start_index = (number[0] == '-') ? 1 : 0;
     for (auto i = start_index; i < (integer_t)number.size(); ++i)
-        if(number[i] < '0' || number[i] > '9')
+        if (number[i] < '0' || number[i] > '9')
             return false;
     return true;
 }
