@@ -12,7 +12,7 @@ TARGET              = SECD
 CONFIG              += console
 CONFIG              -= app_bundle
 QMAKE_CXXFLAGS      += -std=c++11
-#QMAKE_LFLAGS    += -static
+QMAKE_LFLAGS    += -static
 
 
 TEMPLATE            = app
